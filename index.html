@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Portfolio Website</h1>
+        <p>Welcome to my simple Copilot-assisted website</p>
+    </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Hello! This is my portfolio created with the help of GitHub Copilot.</p>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="card">
+            <h3>Project 1</h3>
+            <p>This is a sample project description.</p>
+            <button class="open-modal">Read More</button>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="modalBox">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p>This website includes CSS, responsive design, and Copilot UI features.</p>
+        </div>
+    </div>
+
+    <script>
+        const openModal = document.querySelector(".open-modal");
+        const modal = document.getElementById("modalBox");
+        const closeBtn = document.querySelector(".close-btn");
+
+        openModal.onclick = () => modal.style.display = "block";
+        closeBtn.onclick = () => modal.style.display = "none";
+        window.onclick = (e) => { if(e.target == modal) modal.style.display = "none"; };
+    </script>
+
+</body>
+</html>
